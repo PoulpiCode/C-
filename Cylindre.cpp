@@ -1,34 +1,29 @@
+
 #include <iostream>
-#include <stdio.h>
 
 using namespace std;
 
-void Afficher(float x)
+
+void Permut(int* x,int* y)
 {
-    cout << x << endl;
+    int temp = 0;
+    temp = *x;
+    *x = *y;
+   *y = temp;
 }
 
-float Cylidrique (float a,float b)
+void affiche(int x,int y)
 {
-    const float pi = 3.14;
-    float Cylindre = pi*(a*a)*b;
-    return Cylindre;
-
+    cout << x << " " << y << endl;
 }
 
-int main() 
+int main()
 {
-    
- float rayon,hauteur;
+    int a = 1;
+    int b = 2;
+    Permut(&a,&b);
+    affiche(a,b);
 
- cout << "Rentrer la valeur du Rayon pour le cylindre : ";
- cin >> rayon;
-
- cout << "Rentrer la valeur de la hauteur pour le cylindre : ";
- cin >> hauteur;
-
- float Cylindre = Cylidrique(rayon,hauteur);
- cout <<"Le volume du Cylindre calculé en fonction est de : " << Cylindre << endl;
 
 }
 
