@@ -1,0 +1,23 @@
+
+#include <iostream>
+
+using namespace std;
+
+
+void Multiplie(int* x)
+{
+    *x = (*x)*4;
+}
+
+void affiche(int x)
+{
+    cout << x << endl;
+}
+
+int main()
+{
+    int a = 2;
+    Multiplie(&a);
+    affiche(a);
+
+}
